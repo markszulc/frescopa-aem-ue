@@ -19,8 +19,9 @@
   --dark-color: #ccc;
   --text-color: black;
 
+
   /* fonts */
-  --body-font-family: roboto, roboto-fallback;
+  --body-font-family: roboto, noto, sans-serif;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
@@ -38,7 +39,7 @@
   --heading-font-size-xs: 18px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 80px;
 }
 
 @font-face {
@@ -198,7 +199,7 @@ main .section {
 
 @media (width >= 900px) {
   .section > div {
-    max-width: 1200px;
+    max-width: 1360px;
     margin: auto;
   }
 }
