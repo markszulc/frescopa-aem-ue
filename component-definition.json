@@ -135,6 +135,25 @@
               }
             }
           }
+        },
+        {
+          "title": "Teaser",
+          "id": "teaser",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Teaser",
+                  "model": "teaser",
+                  "title": "Teaser Title",
+                  "titleType": "h3",
+                  "longDescr": "<p>Teaser Description</p>",
+                  "classes": ["light", "left"]
+                }
+              }
+            }
+          }
         }
       ]
     }
