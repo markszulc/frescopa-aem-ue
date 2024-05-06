@@ -1,25 +1,25 @@
 export function decorateButtons(...buttons) {
   return buttons
     .map((div) => {
-    const a = div.querySelector('a');
-    if (a) {
+      const a = div.querySelector('a');
+      if (a) {
         a.classList.add('button');
         if (a.parentElement.tagName === 'EM') a.classList.add('secondary');
         if (a.parentElement.tagName === 'STRONG') a.classList.add('primary');
         return a.outerHTML;
-    }
-    return '';
+      }
+      return '';
     })
     .join('');
 }
-  
-  export function generateTeaserDOM(props, classes) {
-    // Extract properties, always same order as in model, empty string if not set
-    const [pictureContainer, eyebrow, title, longDescr, shortDescr, firstCta, secondCta] = props;
-    const picture = pictureContainer.querySelector('picture');
-    const hasShortDescr = shortDescr.textContent.trim() !== '';
-    // Build DOM
-    const teaserDOM = document.createRange().createContextualFragment(`
+
+export function generateTeaserDOM(props, classes) {
+  // Extract properties, always same order as in model, empty string if not set
+  const [pictureContainer, eyebrow, title, longDescr, shortDescr, firstCta, secondCta] = props;
+  const picture = pictureContainer.querySelector('picture');
+  const hasShortDescr = shortDescr.textContent.trim() !== '';
+  // Build DOM
+  const teaserDOM = document.createRange().createContextualFragment(`
       <div class='background'>${picture ? picture.outerHTML : ''}</div>
       <div class='foreground'>
         <div class='text'>
