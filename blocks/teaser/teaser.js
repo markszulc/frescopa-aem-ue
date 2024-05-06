@@ -1,17 +1,17 @@
 export function decorateButtons(...buttons) {
-    return buttons
-      .map((div) => {
-        const a = div.querySelector('a');
-        if (a) {
-          a.classList.add('button');
-          if (a.parentElement.tagName === 'EM') a.classList.add('secondary');
-          if (a.parentElement.tagName === 'STRONG') a.classList.add('primary');
-          return a.outerHTML;
-        }
-        return '';
-      })
-      .join('');
-  }
+  return buttons
+    .map((div) => {
+    const a = div.querySelector('a');
+    if (a) {
+        a.classList.add('button');
+        if (a.parentElement.tagName === 'EM') a.classList.add('secondary');
+        if (a.parentElement.tagName === 'STRONG') a.classList.add('primary');
+        return a.outerHTML;
+    }
+    return '';
+    })
+    .join('');
+}
   
   export function generateTeaserDOM(props, classes) {
     // Extract properties, always same order as in model, empty string if not set
