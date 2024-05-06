@@ -282,9 +282,12 @@ header nav .nav-tools {
 }
 
 header .announcement-wrapper {
+  display:none;
   background-color: #A33532;
   min-height: 30px;
-  
+  @media (width >= 900px) {
+    display: block;
+  }
 }
 
 header .announcement-wrapper p {
