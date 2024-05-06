@@ -40,6 +40,8 @@
 
   /* nav height */
   --nav-height: 80px;
+  --header-height: 110px;
+
 }
 
 @font-face {
@@ -75,7 +77,7 @@ body.appear {
 }
 
 header {
-  height: var(--nav-height);
+  height: var(--header-height);
 }
 
 h1, h2, h3,
