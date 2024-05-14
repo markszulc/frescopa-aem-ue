@@ -15,6 +15,7 @@
   --link-color: #00647D;
   --link-hover-color: #00647D;
   --background-color: white;
+  --secondary-color: #DC6E52;
   --light-color: #F4E9DC;
   --dark-color: #ccc;
   --text-color: black;
@@ -167,9 +168,9 @@ button:disabled, button:disabled:hover {
 }
 
 a.button.secondary, button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color)
+  background-color: var(--secondary-color);
+  border: none;
+  color: var(--background-color:)
 }
 
 main img {
