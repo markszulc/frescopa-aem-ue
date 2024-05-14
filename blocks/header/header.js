@@ -113,6 +113,7 @@ export default async function decorate(block) {
   if (brandLink) {
     brandLink.className = '';
     brandLink.closest('.button-container').className = '';
+    brandLink.querySelector('img').setAttribute('alt', 'logo');
   }
 
   const announcements = nav.querySelector('.nav-announcements');
