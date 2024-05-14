@@ -1,6 +1,5 @@
 .banner-content {
   background-color: #f0e0d2;
-  background-image: url(background02.ddf73fc6.png);
   background-size: cover;
   flex-direction: row-reverse;
   justify-content: flex-end;
@@ -23,13 +22,14 @@
 }
 
 .banner-content .banner-detail {
-    width: 865px;
+    min-width: 690px;
     box-sizing: border-box;
     background-size: cover;
     background-position: center;
     color: #58181d;
     margin: 0;
-    padding: 25px;
+    padding: 48px;
+    transform: translateX(-1040px);
 }
 
 .banner-content .banner-detail h3 {
@@ -37,6 +37,13 @@
     margin: 0;
     padding: 0;  
 }
+
+.banner-content .banner-detail p {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 10px 0 0 0px;
+}
+
 .offer-image {
   margin: 0;
 }
@@ -48,7 +55,8 @@
 
 
   .banner-image img {
-    width: 100%;
+    width: 1360px;
+    max-width: 1360px;
     height: 189px;
     object-fit: cover;
     mix-blend-mode: normal;
