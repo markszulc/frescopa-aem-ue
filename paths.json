@@ -1,6 +1,7 @@
 {
   "mappings": [
     "/content/frescopa/:/",
-    "/content/frescopa/configuration:/.helix/config.json"
+    "/content/frescopa/configuration:/.helix/config.json",
+    "/content/frescopa/configs:/configs.json"
   ]
 }
