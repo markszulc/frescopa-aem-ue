@@ -13,7 +13,7 @@ module.exports = {
   rules: {
     // allow reassigning param
     'no-param-reassign': [2, { props: false }],
-    "prettier/prettier": ["error", { "singleQuote": true }],
+    "quotes": "off",
     'linebreak-style': ['error', 'unix'],
     'import/extensions': ['error', {
       js: 'always',
