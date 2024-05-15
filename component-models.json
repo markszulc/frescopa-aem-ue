@@ -455,5 +455,23 @@
         "description": "What link to open when clicking the button."
       }
     ]
+  },
+  {
+    "id": "storelocator",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference",
+        "label": "Background Image",
+        "multi": false
+      },{
+        "component": "text-input",
+        "name": "headline",
+        "value": "",
+        "label": "Headline",
+        "valueType": "string"
+      }
+    ]
   }
 ]
