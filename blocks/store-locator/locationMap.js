@@ -9,7 +9,18 @@ class LocationMap extends Component {
     this.loadGoogleMapsApi().then(() => {
       this.map = new google.maps.Map(this.mapContainer, {
         center: { lat: -34.397, lng: 150.644 },
-        zoom: 8
+        zoom: 8,
+        disableDefaultUI: true,
+        keyboardShortcuts: false,
+        styles: [
+          {
+            featureType: "all",
+            stylers: [
+              { saturation: -100 },
+              { visibility : "simplified" }
+            ]
+          }
+        ]
       });
     });
   }
@@ -17,7 +28,7 @@ class LocationMap extends Component {
   loadGoogleMapsApi() {
     return new Promise((resolve) => {
       const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyB4er8NcF-CGHY4ELZbqMlqzAkgsyt798g`;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAP_KEY}`;
       script.async = true;
       script.defer = true;
       script.addEventListener('load', resolve);
