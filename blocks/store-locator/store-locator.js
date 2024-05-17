@@ -1,8 +1,8 @@
 export async function initMap() {
-  // eslint-disable-next-line no-undef
-  const { Map } = await google.maps.importLibrary('maps');
+// eslint-disable-next-line no-undef
+const { Map } = await google.maps.importLibrary('maps');
 
-  map = new Map(document.getElementById('locator-map'), {
+const map = new Map(document.getElementById('locator-map'), {
     center: { lat: -34.397, lng: 150.644 },
     zoom: 8,
     disableDefaultUI: true,
@@ -11,16 +11,17 @@ export async function initMap() {
       {
         featureType: "all",
         stylers: [
+          { lightness : -5 },
           { saturation: -100 },
           { visibility : "simplified" }
         ]
       }
     ]  });
   // eslint-disable-next-line no-undef
-  infoWindow = new google.maps.InfoWindow({
+  const infoWindow = new google.maps.InfoWindow({
     map,
   });
-  getMyLocation(false);
+
 }
 
 
@@ -34,17 +35,10 @@ export default function decorate(block) {
     initMap();
   };
 
-  const d = document.createElement('div');
-  d.className = 'map-container';
-  const mdiv = document.createElement('div');
-  mdiv.id = 'locator-map';
-  mdiv.className = 'map';
-  d.append(mdiv);
-
   const locatorDOM = document.createRange().createContextualFragment(`
   <div class="shopfinder">
     <div class="sidepanel">
-      <h1 class="sidepanel__title">Try a new roast at a Fréscopa near you!</h1>
+      <h3 class="sidepanel__title">Try a new roast at a Fréscopa near you!</h3>
     <div class="search">
       <p class="search__title">Find another location</p>
       <div class="search__box">
