@@ -78,7 +78,10 @@ body.appear {
 }
 
 header {
-  height: var(--header-height);
+  height: 80px;
+  @media (width >= 900px) {
+    height: var(--header-height);
+  }
 }
 
 h1, h2, h3,
@@ -192,7 +195,7 @@ main img {
 
 /* sections */
 main .section {
-  padding: 64px 16px;
+  padding: 0;
 }
 
 @media (width >= 600px) {

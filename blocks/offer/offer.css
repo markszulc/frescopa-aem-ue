@@ -1,17 +1,19 @@
 .offer-content {
-  margin-bottom: 60px;
-  margin-top: 60px;
+  margin-bottom: 0;
+  margin-top: 0;
   width: 100%;
   border-collapse: collapse;
   perspective: 1px;
-  border-radius: 12px;
   overflow: hidden;
 }
 
-@media (width >= 600px) {
+@media (width >= 900px) {
     .offer-content {
         width: 1360px;
         height: 189px;
+        margin-bottom: 60px;
+        margin-top: 60px;
+        border-radius: 12px;
     }
 }
 
@@ -22,9 +24,16 @@
     background-position: center;
     color: #58181d;
     margin: 0;
-    padding: 48px 48px 48px 348px;
+    padding: 10PX;
     display: flex;
+    flex-direction: column;
+}
 
+@media (width >= 900px) {
+  .offer-foreground {
+    padding: 48px 48px 48px 348px;
+    flex-direction: row;
+  }
 }
 
 .offer-foreground .message {
@@ -49,10 +58,17 @@
 }
 
 .offer-background {
-  display:inline-block;
+  display:none;
   position: absolute;
   background-color: #F2EEE9;
 }
+
+@media (width >= 900px) {
+  .offer-background {
+    display:inline-block;
+  }
+}
+
 .offer-background img {
   height: 189px;
 }

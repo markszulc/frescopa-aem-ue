@@ -6,11 +6,18 @@
   .teaser.block > .foreground {
     position: relative;
     display: flex;
-    padding: 139px 87px 0 87px;
+    padding: 70px 40px;;
     background-color: unset;
     max-width: 483px;
+
+
   }
 
+  @media (width >= 900px) {
+    .teaser.block > .foreground {
+      padding: 139px 87px 0 87px;
+    }
+  }
 
 /* turn on the eybrow */
 .teaser.block > .foreground > .text > .eyebrow {
@@ -44,7 +51,6 @@
 .teaser.block > .foreground > .text > .cta > a.button {
     border: 0;
     color: #FFFFFF;
-
 }
 
   /* spacer */
@@ -64,5 +70,18 @@
   .teaser.block > .background {
     display:inline-block;
     position: absolute;
+    box-sizing: border-box;
+  }
+  
+  .teaser.block > .background img {
+    width: auto;
+    object-fit: cover;
+    height: revert-layer;
+  }
 
+  @media (width >= 900px) {
+    .teaser.block > .background img {
+      width: 100%;
+      height: 100%;
+    }  
   }
