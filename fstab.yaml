@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p137825-e1394479.adobeaemcloud.com/bin/franklin.delivery/markszulc/frescopa-aem-ue/main"
+    url: "https://author-p137825-e1511252.adobeaemcloud.com/bin/franklin.delivery/markszulc/frescopa-aem-ue/main"
     type: "markup"
     suffix: ".html"
