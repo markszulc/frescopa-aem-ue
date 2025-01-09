@@ -30,7 +30,8 @@
       "columns",
       "teaser",
       "offer",
-      "storelocator"
+      "storelocator",
+      "product-teaser"
     ]
   },
   {

@@ -457,6 +457,17 @@
     ]
   },
   {
+    "id": "product-teaser",
+    "fields": [
+      {
+        "component": "sku",
+        "name": "sku",
+        "label": "Alt Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "storelocator",
     "fields": [
       {
