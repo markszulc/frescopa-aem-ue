@@ -4,9 +4,14 @@
 
 .product-teaser {
     display: flex;
-    gap: 40px;
+    gap: 0px;
     flex-direction: column;
     justify-content: center;
     background-color: var(--secondary-color);
     border-radius: 12px;
+}
+
+.product-teaser .details h1{
+    text-align: center;
+    margin: 10px;
 }
