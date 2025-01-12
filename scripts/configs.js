@@ -36,7 +36,7 @@ function buildConfigURL(environment) {
     fileName = `configs-${env}.json`;
   }
   const configURL = new URL(`${window.location.origin}/${fileName}`);
-  return 'https://main--aem-boilerplate-commerce--hlxsites.hlx.live/configs.json';
+  return 'https://main--frescopa-aem-ue--markszulc.aem.live/configs.json';
 }
 
 const getConfigForEnvironment = async (environment) => {
