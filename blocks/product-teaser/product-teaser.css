@@ -7,13 +7,18 @@
     gap: 0px;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--secondary-color);
+    background-color: #fff;
+    border-color: var(--secondary-color);
     border-radius: 12px;
+    border-width: 2px;
+    border: var(--secondary-color) 3px solid;
 }
 
 .product-teaser .details h1{
-    text-align: center;
-    margin: 10px;
+    text-align: left;
+    font-size: 48px;
+    margin-top: 40px;
+    font-family: 'Baskerville', serif;
 }
 
 .product-teaser-wrapper {
@@ -59,8 +64,7 @@
 
 .product-teaser h1 {
     min-height: 32px;
-    font: var(--type-headline-1-font);
-    letter-spacing: var(--type-headline-1-letter-spacing);
+    font: var(--heading-font-family);
     margin: 0 0 16px;
 }
 
@@ -90,6 +94,8 @@
 .product-teaser .price .price-final {
     font: var(--type-headline-2-strong-font);
     letter-spacing: var(--type-headline-2-strong-letter-spacing);
+    font-weight: 700;
+    font-size: 30px;
 }
 
 @media (width >= 600px) {

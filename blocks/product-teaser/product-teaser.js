@@ -109,7 +109,7 @@ function renderProduct(product, config, block) {
     </div>
     <div class="details">
       <h1>${name}</h1>
-      <div class="price">${renderPrice(product, priceFormatter.format)}</div>
+      <div class="price">Grab it for ${renderPrice(product, priceFormatter.format)}</div>
       <div class="actions">
         ${config['details-button'] ? `<a href="/products/${urlKey}/${sku}" class="button primary">Details</a>` : ''}
         ${config['cart-button'] && addToCartAllowed && __typename === 'SimpleProductView' ? '<button class="add-to-cart secondary">Add to Cart</button>' : ''}
