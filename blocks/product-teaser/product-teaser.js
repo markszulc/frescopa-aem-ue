@@ -138,20 +138,28 @@ function renderProduct(product, config, block) {
 }
 
 export default async function decorate(block) {
- console.log('decorate product teaser');
-  const config = readBlockConfig(block);
+ const config = {};
+ block.querySelectorAll(':scope > div').forEach((row) => {
+  if (row.children) {
+    const cols = [...row.children];
+      if(cols[0]) {
+        const col = cols[0];
+        if (col.querySelector('p')) {
+          const name = 'sku';
+          let value = '';
+          const ps = [...col.querySelectorAll('p')];
+          if (ps.length === 1) {
+            value = ps[0].textContent;
+          } else {
+            value = ps.map((p) => p.textContent);
+          }
+
+          config[name] = value;
+        }
+      }
+    }
+  });
   console.log(config);
-  config['sku'] = block.querySelector('[data-aue-prop="sku"]').textContent;
-  const skuElement = block.querySelector('[data-aue-prop="sku"]');
-  if (!skuElement) {
-    console.error('SKU element not found');
-    return;
-  }
-  config['sku'] = skuElement.textContent;
-
-  config['details-button'] = !!(config['details-button'] || config['details-button'] === 'true');
-  config['cart-button'] = !!(config['cart-button'] || config['cart-button'] === 'true');
-
   renderPlaceholder(config, block);
 
   const { products } = await performCatalogServiceQuery(productTeaserQuery, {
